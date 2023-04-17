@@ -17,7 +17,7 @@ function getSeason(date) {
     return 'Unable to determine the time of year!';
   }
   let m = new Date(date);
-  if (!Date.parse(date) || date.hasOwnProperty('toString') ) {
+  if (!Date.parse(date) || date.hasOwnProperty('toString')) {
     throw new Error("Invalid date!");
   }
   return season[Math.floor(m.getMonth()*2/3)];
